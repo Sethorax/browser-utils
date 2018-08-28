@@ -1,5 +1,5 @@
 # Browser Utils
-[![Build Status](https://travis-ci.org/Sethorax/browser-utils.svg?branch=master)](https://travis-ci.org/Sethorax/browser-utils)
+[![Build Status](https://travis-ci.com/Sethorax/browser-utils.svg?branch=master)](https://travis-ci.com/Sethorax/browser-utils)
 [![Coverage Status](https://coveralls.io/repos/github/Sethorax/browser-utils/badge.svg?branch=master)](https://coveralls.io/github/Sethorax/browser-utils?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Sethorax/browser-utils.svg)](https://greenkeeper.io/)
 [![npm (scoped)](https://img.shields.io/npm/v/@sethorax/browser-utils.svg)](https://www.npmjs.com/package/@sethorax/browser-utils)
