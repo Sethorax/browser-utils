@@ -51,7 +51,10 @@ var getScrollTop = function (target) {
     if (target instanceof Element) {
         return target.scrollTop;
     }
-    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    return (window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0);
 };
 
 export { listToArray, elementMatches, isEventWithPath, getEventPath, getScrollTop };

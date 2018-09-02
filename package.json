@@ -1,6 +1,6 @@
 {
   "name": "@sethorax/browser-utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Collection of utility functions for the browser.",
   "main": "dist/browser-utils.umd.js",
   "module": "dist/browser-utils.es5.js",
