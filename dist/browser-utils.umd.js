@@ -53,10 +53,18 @@
             : polyfill();
     };
 
+    var getScrollTop = function (target) {
+        if (target instanceof Element) {
+            return target.scrollTop;
+        }
+        return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    };
+
     exports.listToArray = listToArray;
     exports.elementMatches = elementMatches;
     exports.isEventWithPath = isEventWithPath;
     exports.getEventPath = getEventPath;
+    exports.getScrollTop = getScrollTop;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

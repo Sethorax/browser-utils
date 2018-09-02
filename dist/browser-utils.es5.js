@@ -47,4 +47,11 @@ var getEventPath = function (event) {
         : polyfill();
 };
 
-export { listToArray, elementMatches, isEventWithPath, getEventPath };
+var getScrollTop = function (target) {
+    if (target instanceof Element) {
+        return target.scrollTop;
+    }
+    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+};
+
+export { listToArray, elementMatches, isEventWithPath, getEventPath, getScrollTop };
