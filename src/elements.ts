@@ -19,7 +19,8 @@ export const elementMatches = (element: HTMLElement, selector: string) => {
         (element.matches && element.matches(selector)) ||
         (element.webkitMatchesSelector &&
             element.webkitMatchesSelector(selector)) ||
-        (element.msMatchesSelector && element.msMatchesSelector(selector)) ||
+        ((element as any).msMatchesSelector &&
+            (element as any).msMatchesSelector(selector)) ||
         false
     );
 };

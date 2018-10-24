@@ -1,6 +1,6 @@
 export interface EventWithPath extends Event {
-    path?: EventTarget[];
-    composedPath?: () => EventTarget[];
+    path: EventTarget[];
+    composedPath: () => EventTarget[];
 }
 /**
  * Checks if the event has a path or composedPath property.

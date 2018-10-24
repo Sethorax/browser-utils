@@ -15,7 +15,8 @@ var elementMatches = function (element, selector) {
     return ((element.matches && element.matches(selector)) ||
         (element.webkitMatchesSelector &&
             element.webkitMatchesSelector(selector)) ||
-        (element.msMatchesSelector && element.msMatchesSelector(selector)) ||
+        (element.msMatchesSelector &&
+            element.msMatchesSelector(selector)) ||
         false);
 };
 

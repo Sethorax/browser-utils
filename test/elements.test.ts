@@ -36,7 +36,7 @@ describe("elements", () => {
         expect(BrowserUtils.elementMatches(list[2], ".target")).toBeFalsy();
 
         let t = jsdom.window.document.querySelector(".target");
-        t.msMatchesSelector = t.matches;
+        (t as any).msMatchesSelector = t.matches;
         t.matches = undefined;
 
         expect(BrowserUtils.elementMatches(list[1], ".target")).toBeTruthy();

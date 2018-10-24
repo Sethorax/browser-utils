@@ -22,6 +22,9 @@ describe("events", () => {
 
         const evt = new jsdom.window.Event("click");
 
+        (evt as any).path = undefined;
+        (evt as any).composedPath = undefined;
+
         expect(BrowserUtils.isEventWithPath(evt)).toBeFalsy();
 
         (evt as any).path = [];
@@ -29,7 +32,7 @@ describe("events", () => {
         expect(BrowserUtils.isEventWithPath(evt)).toBeTruthy();
 
         (evt as any).path = undefined;
-        (evt as any).composedPath = () => [];
+        (evt as any).composedPath = (): Array<any> => [];
 
         expect(BrowserUtils.isEventWithPath(evt)).toBeTruthy();
 
@@ -67,10 +70,14 @@ describe("events", () => {
         });
 
         jsdom.window.addEventListener("click", event => {
-            expect(BrowserUtils.getEventPath(event).length).toBe(0);
+            expect(BrowserUtils.getEventPath(event).length).toBe(1);
         });
 
         const evt = new jsdom.window.MouseEvent("click");
+
+        (evt as any).path = undefined;
+        (evt as any).composedPath = undefined;
+
         t.dispatchEvent(evt);
 
         const e = new jsdom.window.MouseEvent("click");
